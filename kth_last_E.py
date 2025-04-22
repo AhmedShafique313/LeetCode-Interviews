@@ -1,17 +1,34 @@
 class Node:
     def __init__(self, data):
-        self.data= data
+        self.data = data
         self.next = None
+
+def kthLastElement(head, k):
+    fast = slow = head
+    for i in range(k):
+        if not fast:
+            return False
+        fast = fast.next
     
-def insert_ll(head, data):
-    new_node = Node(data)
-    if head is None:
-        return new_node
+    while fast:
+        slow = slow.next
+        fast = fast.next
+    return slow
+
+def creating_linkedList(arr):
+    if not arr:
+        return False
+    
+    head = Node(arr[0])
     current = head
-    
-    while current.next:
+    for value in arr[1:]:
+        current.next = Node(value)
         current = current.next
-    current.next = new_node
     return head
 
-def 
+
+array = [10, 20, 30, 40, 50]
+k = 2
+head = creating_linkedList(array)
+result = kthLastElement(head, k)
+print(f"The {k}-th last element is:", result.data)
