@@ -1,4 +1,3 @@
-
 def creating_stack():
     stack = []
     return stack
@@ -9,6 +8,11 @@ def empty_Stack(Stack):
 def inserting(stack, data):
     stack.append(data)
     print('Pushed item: ' + data)
+
+def top(stack):
+    if empty_Stack(stack):
+        return 'Empty'
+    print(stack[-1])
 
 def remove(stack):
     if(empty_Stack(stack)):
