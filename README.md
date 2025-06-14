@@ -11,3 +11,5 @@ Example:
 
 If the target is `10` and the list is `[1, 8, 2, 6, 5]`, then the pair of numbers that add up to `10` is `8 + 2`.
 The indices of these two numbers are `[1, 2]`, so that would be the correct output.
+
+### Other Problems
